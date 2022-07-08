@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Psychodelic</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="strips">
+      <div class="left-strip"></div>
+      <div class="middle-strip"></div>
+      <div class="right-strip"></div>
+    </div>
+
+    <div class="logo">
+      <img src="./img/loop-eyes.gif" alt="">
+    </div>
+
+    <div class="sidetext">
+      <ul>
+        <li>psy</li>
+        <li>psy</li>
+        <li>psy</li>
+      </ul>
+    </div>
+
+  <!--   <div class="menu-btn">
+      <span class="menu-icon"><i class="fa fa-bars"></i></span>
+    </div>
+
+    <div class="social-media">
+      <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+      </ul>
+    </div> -->
+
+    <div class="person">
+      <img src="./assets/img/Halloween.png" alt="">
+    </div>
+
+    <div class="content">
+      <p>Psychodelic</p>
+      <h1>Ready?</h1>
+      <button class="btn-1">Explore</button>
+      <button class="btn-2">Book Ticket</button>
+    </div>
+
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="bottomnav">
+     <!--   <div class="bottomnav-title">PSY</div> -->
+
+      <div class="bottomnav-img">
+        <img src="./img/loop-eyes.gif" alt="">
+      </div>
+      <div class="bottomnav-img">
+        <img src="./img/loop-eyes.gif" alt="">
+      </div>
+      <div class="bottomnav-img">
+        <img src="./img/loop-eyes.gif" alt="">
+      </div>
+
+      <ul>
+        <li><i class="fa fa-chevron-left"></i></li>
+        <li><i class="fa fa-chevron-right"></i></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="bottomnav-derecha">
+       
+
+     <div class="bottomnav-img">
+       <img src="./img/loop-eyes.gif" alt="">
+     </div>
+     <div class="bottomnav-img">
+       <img src="./img/loop-eyes.gif" alt="">
+     </div>
+     <div class="bottomnav-img">
+       <img src="./img/loop-eyes.gif" alt="">
+     </div>
+
+   
+   </div>
+
+
+   <div class="bottomnav-medio">
+       
+
+    <div class="bottomnav-img">
+      <img src="./img/manos.gif" alt="">
+    </div>
+    <div class="bottomnav-img">
+      <img src="./img/psychedelicmanosaustro.gif" alt="">
+    </div>
+    <div class="bottomnav-img">
+      <img src="./img/deo5kth-86f3aab4-3add-4ea0-9045-d488852b465f.gif" alt="">
+    </div>
+
+  
+  </div>
+  <div class="bottomnav-medio2">
+       
+
+    <div class="bottomnav-img">
+      <img src="./img/dej7c20-2b6e63a0-6758-4662-90bd-ab736ad50ee2.gif" alt="">
+    </div>
+    <div class="bottomnav-img">
+      <img src="./img/dej42w5-6a38d565-0da8-4bd4-bfc3-f51e0a88ffb7.gif" alt="">
+    </div>
+    <div class="bottomnav-img">
+      <img src="./img/dejjm86-878d5b9c-f9ee-46fa-b824-e5a9fef07ff8.gif" alt="">
+    </div>
+
+
+    <div class="bottomnav-costadoderecho">
+       
+
+        <div class="bottomnav-img">
+          <img src="./img/V218.gif" alt="">
+        </div>
+        <div class="bottomnav-img">
+         <img src="./img/dejg9dp-5bd39f7a-8582-4dab-b205-d4e64a802630.gif" alt="">
+        </div>
+        <div class="bottomnav-img">
+          <img src="./img/leon.gif" alt="">
+        </div>
+  
+  </div>
+  
+
+  
+
+
+
+  <script>
+ 
+    TweenMax.from(".logo", 2, {
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.staggerFrom(".sidetext ul li", 2, {
+      x: 40,
+      opacity: 0,
+      ease: Expo.easeInOut
+    }, 0.2)
+
+    TweenMax.from(".menu-btn", 2, {
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.staggerFrom(".social-media ul li", 2, {
+      x: 40,
+      opacity: 0,
+      ease: Expo.easeInOut
+    }, 0.2)
+
+    TweenMax.from(".person img", 2, {
+      delay: 1,
+      y: 60,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".middle-strip", 2, {
+      delay: 1,
+      y: -50,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.staggerFrom(".dot", 2, {
+      delay: 1.5,
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    }, 0.2)
+
+    TweenMax.from(".content p", 1.8, {
+      delay: 1.5,
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".content h1", 2, {
+      delay: 1.5,
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".content .btn-1", 1.5, {
+      delay: 1.5,
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".content .btn-2", 1.5, {
+      delay: 1.5,
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".bottomnav-title", 2, {
+      delay: 2,
+      x: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".bottomnav-img", 2, {
+      delay: 2,
+      y: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".bottomnav ul li:nth-child(1)", 1, {
+      delay: 2,
+      x: 20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".bottomnav ul li:nth-child(2)", 1, {
+      delay: 2,
+      x: -20,
+      opacity: 0,
+      ease: Expo.easeInOut
+    })
+  </script>
+
+</body>
+
+</html>
