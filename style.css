@@ -1,46 +1,124 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+.preload{
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(0,1,31,1) 0%, rgba(0,0,0,1) 100%); 
+  background-color:#000000;
+  position: fixed;
+  top: 0rem;
+  left: 0px;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* texto preload  */
+.preload p{
+ /*  font-family:'Futura', sans-serif; */
+  font-size: 2rem;
+  color: white;
+  font-weight: 00;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+  animation: animate1 1s infinite;
+}
+
+
+@keyframes animate1{
+  to{
+      opacity: 1;
+  }
+  from{
+      opacity: 0;
+  }
+}
+
+
+
+.preload img{
+  height: 30%;
+  width: 30%;
+   position: absolute; 
+  top: 50%;
+  left: 50%;
+  margin-top: -2rem;
+  transform: translate(-50%, -50%);
+  animation: animate1 1s infinite;
+  
+}
+
+
+@keyframes animate1{
+  to{
+      color: #c0ff05;
+  }
+  from{
+      color: #ffffff ;
+  }
+}
+
+/* clase que crea js para que se cierra */
+
+.cerrar{
+  opacity: -0;
+  transition: all 0.3s;
+}
+
+
+/* Lineas de carga */
+.lds-dual-ring {
+  display: inline-block;
+  text-align: center;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(15, 14, 15);
+  border-color: #4f00ce  transparent #4f00ce  transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(750deg);
+  }
+}
+
+
+
+
+
+
 
 body {
   width: 100%;
-  height: 100vh;
-  background-color: #000F18;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
   color: #01B1E7;
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
+ 
 }
 
-.left-strip, .right-strip {
-  position: absolute;
-  width: 1px;
-  height: 100vh;
-  background: #D35A08;
-  z-index: -1;
-}
-
-.left-strip { left: 100px; }
-.right-strip { right: 100px; }
-
-.middle-strip {
-  position: absolute;
-  width: 70px;
-  height: 2000px;
-  background: #D35A08;
-  top: 0;
-  bottom: 0;
-  left: 40px;
-  transform: rotate(40deg);
-  z-index: -1;
-  opacity: .2;
-  margin-top: -300px;
-}
 
 .logo {
   line-height: 40px;
   float: left;
   margin: 1.2em 0 0 2.2em;
+  z-index: 1000;
+  
 }
 
 .logo img {
@@ -48,23 +126,6 @@ body {
   height: auto;
 }
 
-.sidetext {
-  position: absolute;
-  left: -120px;
-  top: 50%;
-  transform: rotate(-90deg);
-}
-
-.sidetext ul {
-  list-style: none;
-}
-
-.sidetext ul li {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 500;
-  margin-left: 45px;
-}
 
 .menu-btn {
   float: right;
@@ -76,40 +137,23 @@ body {
   font-size: 20px;
 }
 
-.social-media {
-  position: absolute;
-  right: -130px;
-  top: 50%;
-  transform: rotate(90deg);
-}
-
-
-.social-media ul {
-  list-style: none;
-}
-
-.social-media ul li {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  margin-right: 60px;
-}
-
+ 
 .person img {
   position: absolute;
-  bottom: 0;
+  bottom: 100;
+  top: 170px;
   max-width: 100%;
   max-height: 100vh;
   margin-left: -60px;
   z-index: 1;
-}
-
+} 
+ 
 .content {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 48%;
   width: 40%;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 @font-face {
@@ -123,14 +167,14 @@ body {
 .content p {
   margin: 0;
   font-family: 'KreepTown';
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .content h1 {
   margin: 0;
   font-family: 'KreepTown';
-  font-size: 80px;
-  color: #a0d308;
+  font-size: 100px;
+  color: #99c90b;
   letter-spacing: 3px;
   
 }
@@ -163,45 +207,34 @@ body {
 
 .btn-2 {
   background: transparent;
-  color: #D35A08;
+  color: #bbef00;
   padding: 20px 35px;
-  border: 1px solid #D35A08;
+  border: 1px solid #b4fa33;
 }
 
 .btn-2:hover {
-  background: #01B1E7;
-  border: 1px solid #01B1E7;
-  color: #000F18;
+  background: #810084;
+  border: 1px solid #470025;
+  color: #ffc53f;
 }
 
-.dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.dot {
-  display: inline-block;
-  height: 7px;
-  width: 7px;
-  background: #01B1E7;
-  margin: 0 .5em;
-  cursor: pointer;
-}
 
-.dot:nth-child(2) {
-  background: #D35A08;
-}
 
 .bottomnav {
-  position: absolute;
-  bottom: 0;
-  right: 5px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  
 }
 
+.bottomnav img {
+  width: 377px;
+  height: auto;
+  
+}
 .bottomnav-title {
-  font-weght: 500;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -214,13 +247,7 @@ body {
   transform: translateY(-5px);
 }
 
-.bottomnav img {
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-}
+
 
 .bottomnav ul {
   list-style: none;
@@ -234,102 +261,254 @@ body {
   cursor: pointer;
 }
 
-.bottomnav ul li:nth-child(1) {
-  right: -20px;
-  bottom: 115px;
-  background: #D35A08;
-  border: 1px solid #D35A08;
-  color: #fff;
-}
-
-.bottomnav ul li:nth-child(1):hover {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #D35A08;
-}
-
-.bottomnav ul li:nth-child(2) {
-  right: -20px;
-  bottom: 35px;
-  background: #01B1E7;
-  border: 1px solid #01B1E7;
-  color: #000F18;
-}
-
-.bottomnav ul li:nth-child(2):hover {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #01B1E7;
-}
 
 
 
-
-
-.bottomnav-derecha{
-  position: absolute;
-  bottom: 0;
-  left: 5px;
-}
-
-
-
-.bottomnav-derecha img {
-  width: 300px;
-  height: auto;
-}
-
-
-.bottomnav-medio{
-  position: absolute;
-  bottom: 0;
-  left: 19.1rem;
-}
-
-
-
-.bottomnav-medio img {
-  width: 300px;
-  height: auto;
-}
-
-.bottomnav-medio2{
-  position: absolute;
-  bottom: 0;
-  left: 37.9rem;
-  
-}
-
-
-
-.bottomnav-medio2 img {
-  width: 300px;
-  height: auto;
-}
-
-.bottomnav-costadoderecho{
-  position: absolute;
-  bottom: 0;
-  left:19rem;
-  
-}
-
-
-
-.bottomnav-costadoderecho img {
-  width: 300px;
-  height: auto;
-}
-
-
-
-.section{
-  height: 100vh;
+.textos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* pointer-events: none; */
+  font-family: 'KreepTown';
+  font-size: 3.5rem;
   text-align: center;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  padding: 14rem;
+  gap: 20px;
+
+ 
+
+/* opcion1  */ text-shadow: 0  2px  0   #8b6e15,
+  0  4px  0   #7c6213,
+  0  6px  0   #6e5611, 
+  0  8px  0   #5f4b0e, 
+  0 10px  0   #503f0c,
+  0 12px  0   #41330a,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+
+} 
+
+/* opcion2  text-shadow: 0  2px 0 #8b6e15,
+  0  4px 0 #7c6213,
+  0  6px 0 #6e5611, 
+  0  8px 0 #5f4b0e, 
+  0 10px 0 #503f0c,
+  0 12px 0 #41330a;
+} */
+
+
+
+/* opcion 3 text-shadow: 0  2px 0 #41330a,
+  0  4px 0 #41330a,
+  0  6px 0 #41330a,
+  0  8px 0 #41330a,
+  0 10px 0 #41330a,
+  0 12px 0 #41330a;
+} */
+
+
+main{
+  overflow: hidden;
 }
 
-.box{
-  background-color: red;
-  width: 200px;
-  height: 200px;
+ .textos{
+  background-image: url(/img/phazed-1080.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+/*   background-attachment: fixed;
+  */
+  background-position: center; 
+  width: 100%;
+  height: 150vh;
+  overflow: hidden;
+  z-index: 1000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ transition: all .5s ease-in-out;
+
+}
+
+.readyManos{
+  position: absolute;
+  display: flex;
+  padding: 30px 30px;
+  margin: 40px 0;
+  color: #03e9f4;
+  text-decoration: none;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  font-family: 'KreepTown';
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  z-index: 1500;
+  filter: brightness(1.75);
+ background-color: transparent;
+ border:none;
+ cursor: pointer;
+ bottom: 0rem;
+ font-size: 4rem;
+ transition: all .5s ease-in-out;
+ backdrop-filter: 1rem;
+
+}
+.readyManos:hover{
+  background-color: #c0ff05;
+  color: #21001a;
+  backdrop-filter: 1rem;
+  box-shadow: 0 0 5px #c0ff05,
+              0 0 25px #c0ff05,
+              0 0 50px #c0ff05,
+              0 0 200px #c0ff05;
+/*    -webkit-box-reflect:below 1px linear-gradient(transparent, rgb(249, 248, 249)); */
+}
+/* .readyManos:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+.readyManos:nth-child(2){
+  filter: hue-rotate(110deg);
+} */
+.readyManos span{
+  position: absolute;
+  display: block;
+}
+/* .readyManos span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#03e9f4);
+  animation: animate6 1s linear infinite;
+} */
+ @keyframes animate6{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+} 
+.readyManos span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.readyManos span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+.readyManos span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}
+
+
+
+
+
+.text1{
+   color: #c0ff05;
+   
+}
+.text3{
+  color: #fc2fffd4;
+}
+.text4{
+  color: #d25b0b;
+}
+
+.text5{
+  color: #470025;
+}
+
+
+.container2{
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition:  all .4s ease-in-out ;
+}
+
+.container2_active{
+  background-color: #000102;
+  visibility: visible;
+  opacity: 1;
+  z-index: 2000;
+  transition:  all 1.5s ease-in-out ;
+}
+
+.text{
+  font-family: 'KreepTown';
+  font-size: 3.2rem;
+  text-align: center;
+  padding: 1rem;
+  gap: 20px;
+/* opcion1  */ text-shadow: 0  2px  0   #8b6e15,
+  0  4px  0   #7c6213,
+  0  6px  0   #6e5611, 
+  0  8px  0   #5f4b0e, 
+  0 10px  0   #503f0c,
+  0 12px  0   #41330a,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+}
+
+.volverButton{
+  width: 10rem;
+  height: 5rem;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  z-index: 2100;
+  cursor: pointer;
 }
