@@ -1,7 +1,7 @@
 const readyManos = document.querySelector(".readyManos")
 const container2 = document.querySelector(".container2")
 const volverButton = document.querySelector(".volverButton")
-const texts = document.querySelector(".text")
+const boxVideo = document.querySelector(".boxVideo")
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,6 +20,9 @@ readyManos.addEventListener("click", function(){
 
     setTimeout(() => {
         container2.classList.add("container2_active")
+
+        boxVideo.innerHTML = '<video class="videoPsycodelic" src="./img/y2mate.com - Chelou  Out Of Sight_1080p.mp4" loop muted autoplay></video>'
+
     }, 1000);
 
 
