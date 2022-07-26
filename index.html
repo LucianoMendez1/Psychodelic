@@ -12,11 +12,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js" integrity="sha512-m/n857VfrPYUcRvzCfqfrC9aMT06TQA2V0DcX/Ovovrhswa3038FfYmHlB0l/ZMukVyKWmiwZI4Pnnd7v3FwFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="./img/hongo1.png">
   <div class="preload">
     <img class="silueta" src="./img/hongo.png" alt="silueta">
     <div class="lds-dual-ring"></div>
-    <p></p><!-- poner texto al prelooad -->
   </div>
   
   
@@ -30,14 +31,14 @@
       <img src="./img/psygirl_1_by_superphazed_dej42in-fullview.jpg" alt="">
     </div> -->
       <div class="person">
-      <img src="./assets/img/chica.png" alt="">
+      <img src="./assets/img/chica2.png" alt="">
     </div>  
 
     <div class="content">
-      <p>Psychodelic</p>
+      <p>Psychedelic</p>
       <h1>Ready?</h1>
-      <button class="btn-1">Explore</button>
-      <button class="btn-2">Book Ticket</button>
+      <button class="btn-1">YES</button>
+      <button class="btn-2">NO</button>
     </div>
 
   
@@ -66,153 +67,100 @@
     </div>
 
   </div>
- <main>
+ <div>
 
   <div class="textos">
-<!--     <p class="text text1">
-      Welcome!
+     <p  class="text text1">
+      Tv  
     </p>
-    <p class=" text text2">
-      Psychodelic Web!
-    </p>
-    <p class=" text text3">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam architecto corporis cumque tempora iure nulla nostrum, aut quis explicabo eaque deleniti nisi, nihil consequatur sapiente. Ex, consectetur? Corporis, non labore?
-    </p>
-    <p class="text text4">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus reiciendis aliquid, suscipit natus quis dolorum et voluptates error numquam repellat vel dolorem ducimus tempore provident iusto animi sequi minus sit.
+     <p  class=" text text2">
+      Sector 
+    </p>  
+   
+   <!--   <p class=" text text3">
+      channel 1
+    </p> -->
+   <!--   <p class="text text4">
+      back and
     </p>
     <p class="text text5">
-      Thank you
-    </p> -->
+      enjoy :)!
+    </p>  -->
     <button  class="readyManos" >
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Ready ?
+      START
     </button>
-  </div>
-
-  <div class="container2">
-    <button class="volverButton">Volver</button>
-    <div class="boxVideo">
-
+    
+      <div class="galery"></div>
+        <button class="sig">Sig</button>
+            
+      </div>
     </div>
 
-
-  </div>
- 
    
- 
+  <div class="container2">
+    <button class="volverButton">back</button>
+    <div class="boxVideo">
+        <!-- aca se carga el video en js -->
+    </div>
+  </div>
+  </div>
+  <div class="sector2">
+   
+    <div class="textos">
+    
+      <p  class="text text1">
+       Sector  
+     </p>
+      <p  class=" text text2">
+       Relax 
+     </p>  
+     <button  class="readyManos" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      start
+    </button> 
+  </div>
+  <div class="sector3">
+    
+    <div class="textos">
+    
+      <p  class="text text1">
+       Sector 3  
+     </p>
+      <p  class=" text text2">
+       
+        choose the option 
+     </p>  
+     <button  class="readyManos" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      GOD
+    </button> 
+    <button  class="readyManos1" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      EVIL
+    </button> 
+  </div>
 </main>
 </body>
  
   <script src="./js/scroll.js"></script>
   
+  <script src="./js/textThree.js"></script>
+  <script src="./js/logo.js"></script> 
+  <script src="./js/slider.js"></script> 
 
-  <script>
- 
-    TweenMax.from(".logo", 2, {
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.staggerFrom(".sidetext ul li", 2, {
-      x: 40,
-      opacity: 0,
-      ease: Expo.easeInOut
-    }, 0.2)
-
-    TweenMax.from(".menu-btn", 2, {
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.staggerFrom(".social-media ul li", 2, {
-      x: 40,
-      opacity: 0,
-      ease: Expo.easeInOut
-    }, 0.2)
-
-    TweenMax.from(".person img", 2, {
-      delay: 1,
-      y: 60,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".middle-strip", 2, {
-      delay: 1,
-      y: -50,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.staggerFrom(".dot", 2, {
-      delay: 1.5,
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    }, 0.2)
-
-    TweenMax.from(".content p", 1.8, {
-      delay: 1.5,
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".content h1", 2, {
-      delay: 1.5,
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".content .btn-1", 1.5, {
-      delay: 1.5,
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".content .btn-2", 1.5, {
-      delay: 1.5,
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".bottomnav-title", 2, {
-      delay: 2,
-      x: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".bottomnav-img", 2, {
-      delay: 2,
-      y: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".bottomnav ul li:nth-child(1)", 1, {
-      delay: 2,
-      x: 20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".bottomnav ul li:nth-child(2)", 1, {
-      delay: 2,
-      x: -20,
-      opacity: 0,
-      ease: Expo.easeInOut
-    })
-  </script>  
 
 </body>
 

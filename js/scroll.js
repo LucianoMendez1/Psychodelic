@@ -3,6 +3,11 @@ const container2 = document.querySelector(".container2")
 const volverButton = document.querySelector(".volverButton")
 const boxVideo = document.querySelector(".boxVideo")
 
+
+
+ 
+    
+
 gsap.registerPlugin(ScrollTrigger);
 
 /* cierra el background de manos y entra en el video */
@@ -13,15 +18,19 @@ readyManos.addEventListener("click", function(){
     })
 
     gsap.to(".textos", {
-        scale:10,
-        yPercent: 370 ,
-        duration: 1,
+        scale:20,
+        yPercent: 400 ,
+       
+        duration:1,
     })
 
     setTimeout(() => {
         container2.classList.add("container2_active")
 
-        boxVideo.innerHTML = '<video class="videoPsycodelic" src="./img/y2mate.com - Chelou  Out Of Sight_1080p.mp4" loop muted autoplay></video>'
+        boxVideo.innerHTML = '<video class="videoPsycodelic" src="./img/y2mate.com - Chelou  Out Of Sight_1080p.mp4" muted autoplay></video>'
+       
+
+        
 
     }, 1000);
 
@@ -33,7 +42,7 @@ readyManos.addEventListener("click", function(){
 volverButton.addEventListener("click", function(){
     
     gsap.to(".container2", {
-        duration:.1,
+        duration:0.5,
         delay:0
     })
     gsap.to(".text", {
@@ -46,7 +55,8 @@ volverButton.addEventListener("click", function(){
         gsap.to(".textos", {
             scale:1,
             yPercent: 0 ,
-            duration: 1,
+            
+            duration:1,
             opacity:1
         })
     
@@ -54,6 +64,14 @@ volverButton.addEventListener("click", function(){
 
 
 
+
 })
+
+
+
+
+
+
+
 
 

@@ -98,7 +98,6 @@
 }
 
 
-
 body {
   width: 100%;
   height: 100%;
@@ -150,6 +149,14 @@ body {
   left: 48%;
   width: 40%;
   z-index: 1000;
+  text-shadow: 0  2px  0   #8b6e15,
+  0  4px  0   #7c6213,
+  0  6px  0   #6e5611, 
+  0  8px  0   #5f4b0e, 
+  0 10px  0   #503f0c,
+  0 12px  0   #41330a,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
 }
 
 @font-face {
@@ -286,23 +293,7 @@ body {
 
 } 
 
-/* opcion2  text-shadow: 0  2px 0 #8b6e15,
-  0  4px 0 #7c6213,
-  0  6px 0 #6e5611, 
-  0  8px 0 #5f4b0e, 
-  0 10px 0 #503f0c,
-  0 12px 0 #41330a;
-} */
 
-
-
-/* opcion 3 text-shadow: 0  2px 0 #41330a,
-  0  4px 0 #41330a,
-  0  6px 0 #41330a,
-  0  8px 0 #41330a,
-  0 10px 0 #41330a,
-  0 12px 0 #41330a;
-} */
 
 
 main{
@@ -310,7 +301,7 @@ main{
 }
 
  .textos{
-  background-image: url("./img/phazed-1080.gif");
+  background-image: url("./img/phazed-1080.gif" );
   background-repeat: no-repeat;
   background-size: cover;
 /*   background-attachment: fixed;
@@ -326,18 +317,38 @@ main{
   align-items: center;
   flex-direction: column;
  transition: all .5s ease-in-out;
+ text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+ 0.025em 0.04em 0 #fffc00;
+ }
+ 
 
+.sector2 .textos{
+  
+  background-image: url("./img/nebula1.gif");
+  /* transform:rotate(180deg);
+-ms-transform:rotate(180deg); /* IE 9 */
+/* -webkit-transform:rotate(180deg); */ 
 }
 
+
+.sector3 .textos{
+  background-image: url("./img/jesus.jpg");
+  
+ 
+}
+
+
+
 .readyManos{
-  position: absolute;
+  position: center;
   display: flex;
   padding: 30px 30px;
-  margin: 40px 0;
-  color: #03e9f4;
+  margin: 100px 0;
+  color: #f1d1f1;
   text-decoration: none;
   justify-content: center;
   text-transform: uppercase;
+  border-radius: 5%;
   letter-spacing: 4px;
   overflow: hidden;
   font-family: 'KreepTown';
@@ -348,39 +359,33 @@ main{
  border:none;
  cursor: pointer;
  bottom: 0rem;
- font-size: 4rem;
+ font-size: 3.7rem;
  transition: all .5s ease-in-out;
  backdrop-filter: 1rem;
-
+ text-shadow: 0  2px  0   #8b6e15,
+ 0  4px  0   #7c6213,
+ 0  6px  0   #6e5611, 
+ 0  8px  0   #5f4b0e, 
+ 0 10px  0   #503f0c,
+ 0 12px  0   #41330a,
+3px 8px 15px rgba(0,0,0,0.1),
+3px 8px  5px rgba(0,0,0,0.3)
 }
 .readyManos:hover{
-  background-color: #c0ff05;
-  color: #21001a;
+  background-color: #810084;
+  color: #f1f1f1;
   backdrop-filter: 1rem;
-  box-shadow: 0 0 5px #c0ff05,
-              0 0 25px #c0ff05,
-              0 0 50px #c0ff05,
-              0 0 200px #c0ff05;
-/*    -webkit-box-reflect:below 1px linear-gradient(transparent, rgb(249, 248, 249)); */
+  box-shadow: 0 0 5px #810084,
+              0 0 25px #810084,
+              0 0 50px #810084,
+              0 0 200px #810084;
 }
-/* .readyManos:nth-child(1){
-  filter: hue-rotate(270deg);
-}
-.readyManos:nth-child(2){
-  filter: hue-rotate(110deg);
-} */
+
 .readyManos span{
   position: absolute;
   display: block;
 }
-/* .readyManos span:nth-child(1){
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg,transparent,#03e9f4);
-  animation: animate6 1s linear infinite;
-} */
+
  @keyframes animate6{
   0%{
       left: -100%;
@@ -392,9 +397,9 @@ main{
 .readyManos span:nth-child(2){
   top: -100%;
   right: 0;
-  width: 2px;
+  width: 5px;
   height: 100%;
-  background: linear-gradient(180deg,transparent,#03e9f4);
+  background: linear-gradient(180deg,transparent,#810084);
   animation: animate2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -410,8 +415,8 @@ main{
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg,transparent,#03e9f4);
+  height: 5px;
+  background: linear-gradient(270deg,transparent,#810084);
   animation: animate3 1s linear infinite;
   animation-delay: 0.50s;
 }
@@ -428,9 +433,9 @@ main{
 .readyManos span:nth-child(4){
   bottom: -100%;
   left: 0;
-  width: 2px;
+  width: 5px;
   height: 100%;
-  background: linear-gradient(360deg,transparent,#03e9f4);
+  background: linear-gradient(360deg,transparent,#810084);
   animation: animate4 1s linear infinite;
   animation-delay: 0.75s;
 }
@@ -451,6 +456,9 @@ main{
    color: #c0ff05;
    
 }
+.text2{
+  color:#01B1E7;
+}
 .text3{
   color: #fc2fffd4;
 }
@@ -459,10 +467,44 @@ main{
 }
 
 .text5{
-  color: #470025;
+  color: #d25b0b;
 }
 
-
+.sector2 .text1{
+  color: #ff05ff;
+  
+}
+.sector2 .text2{
+ color:#01e7c5;
+}
+.sector2 .text{
+ 
+   text-shadow: 0  2px  0   #ce0bff,
+    0  4px  0   #7c1313,
+    0  6px  0   #6e1111, 
+    0  8px  0   #5f0e0e, 
+    0 10px  0   #500c0c,
+    0 12px  0   #410a0a,
+   3px 8px 15px rgba(0,0,0,0.1),
+   3px 8px  5px rgba(0,0,0,0.3);
+  }
+.sector3 .text1{
+  color: #980f00;
+  
+}
+.sector3  .text2{
+ color:#ff9d00;
+}
+.sector3 .text{
+ text-shadow: 0  2px  0   #ebff0b,
+  0  4px  0   #7c1313,
+  0  6px  0   #6e1111, 
+  0  8px  0   #5f0e0e, 
+  0 10px  0   #500c0c,
+  0 12px  0   #410a0a,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+}
 .container2{
   width: 100%;
   height: 100vh;
@@ -489,7 +531,7 @@ main{
   text-align: center;
   padding: 1rem;
   gap: 20px;
-/* opcion1  */ text-shadow: 0  2px  0   #8b6e15,
+ text-shadow: 0  2px  0   #8b6e15,
   0  4px  0   #7c6213,
   0  6px  0   #6e5611, 
   0  8px  0   #5f4b0e, 
@@ -502,9 +544,235 @@ main{
 .volverButton{
   width: 10rem;
   height: 5rem;
-  position: absolute;
   right: 5%;
   top: 5%;
+  border-radius: 5%;
   z-index: 2100;
   cursor: pointer;
+  position: absolute;
+   left: 50px;
+   z-index: 5000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: transparent;
+   bottom: 50%;
+   border: none;
+   font-family: 'KreepTown';
+   font-size: 28px;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  text-shadow: 0  2px  0   #8b6e15,
+  0  4px  0   #7c6213,
+  0  6px  0   #6e5611, 
+  0  8px  0   #5f4b0e, 
+  0 10px  0   #503f0c,
+  0 12px  0   #41330a,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+ 
+ 
+}
+.volverButton:hover{
+  color: #bbef00;
+ 
+ 
+}
+
+
+.sig{
+   position: absolute;
+   right: 50px;
+   z-index: 5000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: transparent;
+   bottom: 50%;
+   border: none;
+   font-family: 'KreepTown';
+   font-size: 30px;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  text-shadow: 0  2px  0   #8b6e15,
+  0  4px  0   #7c6213,
+  0  6px  0   #6e5611, 
+  0  8px  0   #5f4b0e, 
+  0 10px  0   #503f0c,
+  0 12px  0   #41330a,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+
+}
+
+.sig:hover{
+  color: #bbef00;
+  
+}
+
+.sector3 .readyManos{
+  position:relative;
+  right: 20%;
+}
+
+.sector3 .readyManos1{
+  position:relative;
+  left: 20%;
+  bottom: 34%;
+  display: flex;
+  padding: 30px 30px;
+  margin: 100px 0;
+  color: #f1d1f1;
+  text-decoration: none;
+ 
+  text-transform: uppercase;
+  border-radius: 5%;
+  letter-spacing: 4px;
+  overflow: hidden;
+  font-family: 'KreepTown';
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  z-index: 1500;
+  filter: brightness(1.75);
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+ font-size: 3.7rem;
+ transition: all .5s ease-in-out;
+ backdrop-filter: 1rem;
+ text-shadow: 0  2px  0   #8b6e15,
+ 0  4px  0   #7c6213,
+ 0  6px  0   #6e5611, 
+ 0  8px  0   #5f4b0e, 
+ 0 10px  0   #503f0c,
+ 0 12px  0   #41330a,
+3px 8px 15px rgba(0,0,0,0.1),
+3px 8px  5px rgba(0,0,0,0.3)
+}
+
+.sector3 .readyManos{
+  color: #2b83ca;
+  text-shadow: 0  2px  0   #040406,
+  0  4px  0   #13657c,
+  0  6px  0   #11526e, 
+  0  8px  0   #0e2a5f, 
+  0 10px  0   #0c2e50,
+  0 12px  0   #0a4133,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+}
+
+.sector3 .readyManos:hover{
+  background-color: #004f84;
+  color: #f1f1f1;
+  backdrop-filter: 1rem;
+  box-shadow: 0 0 5px #003e84,
+              0 0 25px #008465,
+              0 0 50px #001f84,
+              0 0 200px #007784;
+}
+
+.sector3 .readyManos span:nth-child(2){
+  background: linear-gradient(180deg,transparent,#008472);
+}
+.sector3 .readyManos span:nth-child(3){
+  background: linear-gradient(270deg,transparent,#007084);
+
+}
+
+.sector3 .readyManos span:nth-child(4){
+  background: linear-gradient(360deg,transparent,#00847b);
+}
+
+
+
+
+.sector3 .readyManos1{
+  color: #ca2b2b;
+  text-shadow: 0  2px  0   #040406,
+  0  4px  0   #7c1313,
+  0  6px  0   #6e1111, 
+  0  8px  0   #5f220e, 
+  0 10px  0   #500c0c,
+  0 12px  0   #410a0a,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+}
+
+.sector3 .readyManos1:hover{
+  background-color: #840000;
+  color: #f1f1f1;
+  backdrop-filter: 1rem;
+  box-shadow: 0 0 5px #840000,
+              0 0 25px #840000,
+              0 0 50px #840000,
+              0 0 200px #840000;
+}
+
+
+
+@keyframes animate6{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+} 
+.sector3  .readyManos1 span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#840000);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.sector3 .readyManos1 span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg,transparent,#840000);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+.sector3 .readyManos1 span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#840000);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}
+
+.sector3 .readyManos1 span{
+  position: absolute;
+  display: block;
 }
