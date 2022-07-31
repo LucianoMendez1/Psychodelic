@@ -104,22 +104,13 @@ body {
   background-color: rgb(0, 0, 0);
   color: #01B1E7;
   font-family: 'Montserrat', sans-serif;
- 
-}
-
-
-.logo {
-  line-height: 40px;
-  float: left;
-  margin: 1.2em 0 0 2.2em;
-  z-index: 1000;
   
 }
-
-.logo img {
-  width: 30px;
-  height: auto;
+::-webkit-scrollbar {
+  width: 1px;
 }
+
+
 
 
 .menu-btn {
@@ -263,10 +254,6 @@ body {
   transition: .2s ease-in-out;
   cursor: pointer;
 }
-
-
-
-
 .textos {
   display: flex;
   flex-direction: column;
@@ -292,14 +279,6 @@ text-shadow: 0  2px  0   #8b6e15,
  3px 8px  5px rgba(0,0,0,0.3);
 
 } 
-
-
-
-
-main{
-  overflow: hidden;
-}
-
  .textos{
   background-image: url("./img/phazed-1080.gif" );
   background-repeat: no-repeat;
@@ -649,6 +628,13 @@ main{
   visibility: hidden;
   opacity: 0;
   transition:  all .4s ease-in-out ;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  width: 100vw;
+  object-fit: cover;
+  left: 0;
+  
   
 }
 
@@ -658,6 +644,7 @@ main{
   opacity: 1;
   z-index: 2000;
   transition:  all 1.5s ease-in-out ;
+
   
 }
 
@@ -747,7 +734,7 @@ main{
  
 }
 .volverButton2:hover{
-  color: #bbef00;
+  color: #6b009c;
  
  
 }
