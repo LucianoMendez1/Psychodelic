@@ -2,9 +2,16 @@ const readyManos = document.querySelector(".readyManos")
 const container2 = document.querySelector(".container2")
 const volverButton = document.querySelector(".volverButton")
 const volverButton2 = document.querySelector(".volverButton2")
+const volverButton3 = document.querySelector(".volverButton3")
 const boxVideo = document.querySelector(".boxVideo")
 const readyManosrelax = document.querySelector(".readyManosrelax")
 const container3 = document.querySelector(".container3")
+
+const readyManos1 = document.querySelector(".readyManos1")
+const container4 = document.querySelector(".container4")
+
+const container5 = document.querySelector(".container5")
+const readyManosM = document.querySelector(".readyManosM")
 
 
 
@@ -128,5 +135,120 @@ volverButton2.addEventListener("click", function(){
 })
 
 
+/* sector 3 */
 
 
+readyManos1.addEventListener("click", function(){
+
+    gsap.to(".text", {
+        opacity:0,
+    })
+
+    gsap.to(".textos", {
+        scale:10,
+        yPercent: 380 ,
+        
+        duration:1,
+    })
+
+    setTimeout(() => {
+        container4.classList.add("container4_active")
+
+        boxVideo.innerHTML = '<video class="videoPsycodelic" src="./img/y2mate.com - Chelou  Out Of Sight_1080p.mp4" muted autoplay></video>'
+       
+
+        
+
+    }, 1000);
+
+
+})
+readyManosM.addEventListener("click", function(){
+
+    gsap.to(".text", {
+        opacity:0,
+    })
+
+    gsap.to(".textos", {
+        scale:10,
+        yPercent: 380 ,
+       
+        duration:1,
+    })
+
+    setTimeout(() => {
+        container5.classList.add("container5_active")
+
+        boxVideo.innerHTML = ''
+       
+
+        
+
+    }, 1000);
+
+
+})
+/* boton museoo */
+
+
+/* cierra el background de manos y entra en el video */
+
+
+
+/* cierra el video y vuelve al menu */
+volverButton3.addEventListener("click", function(){
+    
+    gsap.to(".container5", {
+        duration:0.5,
+        delay:0
+    })
+    gsap.to(".text", {
+        opacity:1,
+        delay:2
+    })
+    container5.classList.remove("container5_active")
+    setTimeout(() => {
+    
+        gsap.to(".textos", {
+            scale:1,
+            yPercent: 0 ,
+            
+            duration:1,
+            opacity:1
+        })
+    
+    }, 1000);
+
+
+
+
+})
+
+
+
+/* cierra el video y vuelve al menu */
+volverButton3.addEventListener("click", function(){
+    
+    gsap.to(".container4", {
+        duration:0.5,
+        delay:0
+    })
+    gsap.to(".text", {
+        opacity:1,
+        delay:2
+    })
+    container4.classList.remove("container4_active")
+    setTimeout(() => {
+    
+        gsap.to(".textos", {
+            scale:1,
+            yPercent:40 ,
+            
+            duration:1,
+            opacity:1
+        })
+    
+    }, 1000);
+
+
+})
