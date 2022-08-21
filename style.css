@@ -226,6 +226,7 @@ body {
   width: 377px;
   height: auto;
   
+  
 }
 .bottomnav-title {
   font-weight: 500;
@@ -776,7 +777,7 @@ text-shadow: 0  2px  0   #8b6e15,
 .container4{
   width: 100%;
   height: 100vh;
-  background: url(./img/ojosrojos.gif);
+  background: url(./img/evil.jpg);
   position: fixed;
   top: 0;
   z-index: 2000;
@@ -791,16 +792,18 @@ text-shadow: 0  2px  0   #8b6e15,
   background-size: 100% 100% ;
   
   
+  
 }
 
 .container4_active{
-  background: url(./img/recorridogif.gif);
+  background: url(./img/evil.jpg);
   visibility: visible;
   opacity: 1;
   z-index: 2000;
   transition:  all 1.5s ease-in-out ;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  
   
 }
 
@@ -936,6 +939,7 @@ text-shadow: 0  2px  0   #8b6e15,
  
 }
 .volverButton3{
+  color: #fa602d;
   width: 10rem;
   height: 5rem;
   right: 5%;
@@ -956,19 +960,19 @@ text-shadow: 0  2px  0   #8b6e15,
    font-family: 'KreepTown';
    font-size: 28px;
   src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
-  text-shadow: 0  2px  0   #8b6e15,
-  0  4px  0   #7c6213,
-  0  6px  0   #6e5611, 
-  0  8px  0   #5f4b0e, 
-  0 10px  0   #503f0c,
-  0 12px  0   #41330a,
- 3px 8px 15px rgba(0,0,0,0.1),
- 3px 8px  5px rgba(0,0,0,0.3);
+  text-shadow: 0  2px  0   #8b1515,
+  0  4px  0   #7c1313,
+  0  6px  0   #6e1111, 
+  0  8px  0   #5f0e0e, 
+  0 10px  0   #500c0c,
+  0 12px  0   #410a0a,
+ 3px 8px 15px rgba(255, 1, 1, 0.1),
+ 3px 8px  5px rgba(255, 0, 0, 0.3);
  
  
 }
 .volverButton3:hover{
-  color: #bbef00;
+  color: #ff01014b;
  
  
 }
@@ -1170,5 +1174,200 @@ text-shadow: 0  2px  0   #8b6e15,
 .sector3 .readyManos1 span{
   position: absolute;
   display: block;
+}
+
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+body {
+  overflow-y: visible;
+  position: relative;
+  height: auto;
+}
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  width: 400%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: yellow;
+}
+
+.lastContainer {
+  display: flex;
+  height: 100vh;
+  background: yellow;
+}
+
+
+
+/* evil sector */
+
+
+.textevil{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+ color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: flickering;
+  animation-timing-function: step-start;
+  padding-top: 90px;
+  font-family: 'KreepTown';
+  font-size: 7rem;
+  text-align: center;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  
+
+}
+
+.textevil2{
+  
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: flickering;
+  animation-timing-function: step-start;
+  color: rgb(246, 246, 246);
+  font-family: 'KreepTown';
+  font-size: 7rem;
+  text-align: center;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+ 
+}
+@keyframes flickering {
+  0% {
+    color: #ffffff;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  5% {
+    color: #5d0f00;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  10% {
+    color: #900000;
+    text-shadow: 1px 1px rgb(76, 0, 0);
+    transform: skewX(-15deg);
+  }
+  15% {
+    color: rgb(107, 0, 0);
+    text-shadow: none;
+    transform: skewX(-15deg);
+  }
+  20% {
+    color: #5a0f004b;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  25% {
+    color: rgb(73, 0, 0);
+    text-shadow: 2px 2px #490000;
+    transform: skewX(0);
+  }
+  30% {
+    color: rgb(59, 0, 63);
+    text-shadow: 2px 2px #680000;
+    transform: skewX(0);
+  }
+  35% {
+    color: rgb(41, 0, 0);
+    text-shadow: 2px 2px #640000;
+    transform: skewX(0);
+  }
+  37% {
+    color: rgb(82, 0, 0);
+    text-shadow: 1px 1px rgb(222, 0, 85);
+    transform: skewX(0);
+  }
+  40% {
+    color: #560000;
+    text-shadow: 1px 1px rgb(111, 0, 159);
+    transform: skewX(0);
+  }
+  45% {
+    color: #7d0202;
+    text-shadow: 1px 1px rgb(117, 0, 176);
+    transform: skewX(0);
+  }
+  50% {
+    color: #760303;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  55% {
+    color: #710101;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  60% {
+    color: #760202;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  65% {
+    color: #6a0000;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  68% {
+    color: #600202;
+    text-shadow: 1px 1px rgb(27, 0, 117);
+    transform: skewX(0);
+  }
+  70% {
+    color: #6e0202;
+    text-shadow: 1px 1px rgb(103, 0, 117);
+    transform: skewX(0);
+  }
+  75% {
+    color: #610101;
+    text-shadow: 1px 1px rgb(81, 0, 83);
+    transform: skewX(10deg);
+  }
+  80% {
+    color: #910101;
+    text-shadow: 1px 1px rgb(103, 2, 0);
+    transform: skewX(10deg);
+  }
+  85% {
+    color: #6c0000;
+    text-shadow: 1px 1px rgb(81, 0, 0);
+    transform: skewX(10deg);
+  }
+  90% {
+    color: #710101;
+    text-shadow: none;
+    transform: skewX(0);
+  }
+  95% {
+    color: #5e0000;
+    text-shadow: 1px 1px rgba(104, 0, 183, 0.569);
+    transform: skewX(0);
+  }
+  100% {
+    color: #6a0000;
+    text-shadow: none;
+    transform: skewX(0);
+  }
 }
 

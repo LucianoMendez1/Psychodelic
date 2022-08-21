@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psychedelic</title>
+    <link rel="stylesheet" href="/styles/stylemuseo.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="slider">
+            <div id="rgbKineticSlider" class="rgbKineticSlider">
+            </div>
+            <nav>
+                <a href="#" class="main-nav prev" data-nav="previous">Back <span></span></a>
+                <a href="#" class="main-nav next" data-nav="next">Sig <span></span></a>
+                <a href="#" class="descrip" data-nav="descrip">description<span></span></a>
+            </nav>
+         <section class="description">
+            <div class="content">
+                <div class="texto">
+                   
+                </div>
+            </div>
+        </section> 
+ <main>
+        <div class="slider">
+            <div id="rgbKineticSlider2" class="rgbKineticSlider2">
+            </div>
+            <nav>
+                <a href="#" class="main-nav prev" data-nav="previou">Back <span></span></a>
+                <a href="#" class="main-nav next" data-nav="next">Sig <span></span></a>
+                <a href="#" class="descrip" data-nav="descrip">description<span></span></a>
+            </nav>
+    </main>
+
+    <!-- TweenMax -->
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+
+    <!-- Pixi JS -->
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+
+    <!-- Slider Plugin -->
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+
+    <script src="../js/museositejs/navegacion.js"></script>
+    <script src="../js/museositejs/main.js"></script>
+    <script src="../js/museositejs/audio.js"></script>
+    <script>
+       let tl =  gsap.timeline({
+           scrollTrigger:{
+               trigger : '.description',
+               start:"center bottom"
+           }
+           });
+           tl.from("img",{x:200,opacity:0,duration:1.5})
+           .from(".content",{y:300,opacity:0,duration:1},"-=1")
+       
+    </script>
+</body>
+
+</html>

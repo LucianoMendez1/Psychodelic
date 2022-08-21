@@ -14,7 +14,7 @@ const container5 = document.querySelector(".container5")
 const readyManosM = document.querySelector(".readyManosM")
 
 
-
+const sig = document.querySelector(".sig")
  
     
 
@@ -28,8 +28,8 @@ readyManos.addEventListener("click", function(){
     })
 
     gsap.to(".textos", {
-        scale:10,
-        yPercent: 380 ,
+        scale:5,
+        yPercent: 360 ,
        
         duration:1,
     })
@@ -37,7 +37,9 @@ readyManos.addEventListener("click", function(){
     setTimeout(() => {
         container2.classList.add("container2_active")
 
-        boxVideo.innerHTML = '<video class="videoPsycodelic" src="./img/y2mate.com - Chelou  Out Of Sight_1080p.mp4" muted autoplay></video>'
+        boxVideo.innerHTML = 
+        '<video class="videoPsycodelic" src="../img/y2mate.com - HD Trippy Animation courtesy of Anthony Francisco Schepperd_1080p.mp4" muted autoplay></video>'
+        /* '<video class="videoPsycodelic" src="./img/y2mate.com - Chelou  Out Of Sight_1080p.mp4" muted autoplay></video>' */
        
 
         
@@ -48,7 +50,7 @@ readyManos.addEventListener("click", function(){
 })
 
 
-/* cierra el video y vuelve al menu */
+/* /* /* cierra el video y vuelve al menu */
 volverButton.addEventListener("click", function(){
     
     gsap.to(".container2", {
@@ -64,7 +66,7 @@ volverButton.addEventListener("click", function(){
     
         gsap.to(".textos", {
             scale:1,
-            yPercent: 0 ,
+            yPercent:0,
             
             duration:1,
             opacity:1
@@ -91,8 +93,8 @@ readyManosrelax.addEventListener("click", function(){
     })
 
     gsap.to(".textos", {
-        scale:30,
-        yPercent: 600 ,
+        scale:13.3,
+        yPercent: 500 ,
         duration:1,
     })
 
@@ -145,19 +147,14 @@ readyManos1.addEventListener("click", function(){
     })
 
     gsap.to(".textos", {
-        scale:10,
-        yPercent: 380 ,
+        scale:2.4,
+        yPercent:620 ,
         
         duration:1,
     })
 
     setTimeout(() => {
-        container4.classList.add("container4_active")
-
-        boxVideo.innerHTML = '<video class="videoPsycodelic" src="./img/y2mate.com - Chelou  Out Of Sight_1080p.mp4" muted autoplay></video>'
-       
-
-        
+        container4.classList.add("container4_active")     
 
     }, 1000);
 
@@ -187,7 +184,7 @@ readyManosM.addEventListener("click", function(){
     }, 1000);
 
 
-})
+ })
 /* boton museoo */
 
 
@@ -251,4 +248,4 @@ volverButton3.addEventListener("click", function(){
     }, 1000);
 
 
-})
+}) 
