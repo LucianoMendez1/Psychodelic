@@ -127,7 +127,7 @@ body {
 .person img {
   position: absolute;
   bottom: 100;
-  top: 170px;
+  top:201px;
   max-width: 100%;
   max-height: 100vh;
   margin-left: -60px;
@@ -161,7 +161,7 @@ body {
 .content p {
   margin: 0;
   font-family: 'KreepTown';
-  font-size: 50px;
+  font-size: 75px;
 }
 
 .content h1 {
@@ -217,16 +217,40 @@ body {
 
 .bottomnav {
  display: flex;
+ flex-direction: row;
  align-items: center;
  justify-content: center;
   
 }
 
 .bottomnav img {
-  width: 377px;
+  width: 423px;
   height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
   
-  
+
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .bottomnav img {
+    
+    width:60px;
+   
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bottomnav img {
+    
+    width: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px){
+  .bottomnav img {
+    
+    width: 269px;
+  }
 }
 .bottomnav-title {
   font-weight: 500;
@@ -266,11 +290,13 @@ body {
   text-align: center;
   src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
   padding: 14rem;
+  border: inherit;
+  
   gap: 20px;
-
+ 
  
 
-text-shadow: 0  2px  0   #8b6e15,
+  text-shadow: 0  2px  0   #8b6e15,
   0  4px  0   #7c6213,
   0  6px  0   #6e5611, 
   0  8px  0   #5f4b0e, 
@@ -305,6 +331,7 @@ text-shadow: 0  2px  0   #8b6e15,
 .sector2 .textos{
   
   background-image: url("./img/nebula1.gif");
+ 
   /* transform:rotate(180deg);
 -ms-transform:rotate(180deg); /* IE 9 */
 /* -webkit-transform:rotate(180deg); */ 
@@ -322,6 +349,16 @@ text-shadow: 0  2px  0   #8b6e15,
   
  
 }
+
+
+.sectordibujo .textos{
+  background-image: url("./img/museo3.gif");
+  
+ 
+}
+
+
+
 
 
 
@@ -442,7 +479,7 @@ text-shadow: 0  2px  0   #8b6e15,
   display: flex;
   padding: 30px 30px;
   margin: 100px 0;
-  color: #f1d1f1;
+  color: #ffffff;
   text-decoration: none;
   justify-content: center;
   text-transform: uppercase;
@@ -470,7 +507,10 @@ text-shadow: 0  2px  0   #8b6e15,
 3px 8px  5px rgba(0,0,0,0.3)
 }
 .readyManosrelax:hover{
-  background-color: #810084;
+  background-image: url(./img/universe-galaxy.gif);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #f1f1f1;
   backdrop-filter: 1rem;
   box-shadow: 0 0 5px #810084,
@@ -546,7 +586,7 @@ text-shadow: 0  2px  0   #8b6e15,
   }
 }
 /* boton de museo */
-.readyManosM{
+.readyManosmuseo{
   position: center;
   display: flex;
   padding: 30px 30px;
@@ -578,7 +618,7 @@ text-shadow: 0  2px  0   #8b6e15,
 3px 8px 15px rgba(0,0,0,0.1),
 3px 8px  5px rgba(0,0,0,0.3);
 }
-.readyManosM:hover{
+.readyManosmuseo:hover{
   background: url(./img/cartas.gif);
   background-size: cover;
   color: #d7d7d7;
@@ -589,7 +629,7 @@ text-shadow: 0  2px  0   #8b6e15,
               0 0 200px #008484;
 }
 
-.readyManosM span{
+.readyManosmuseo span{
   position: absolute;
   display: block;
 }
@@ -619,7 +659,7 @@ text-shadow: 0  2px  0   #8b6e15,
       top: 100%;
   }
 }
-.readyManosM span:nth-child(3){
+.readyManosmuseo span:nth-child(3){
   bottom: 0;
   right: 0;
   width: 100%;
@@ -638,7 +678,7 @@ text-shadow: 0  2px  0   #8b6e15,
 }
 
 
-.readyManosM span:nth-child(4){
+.readyManosmuseo span:nth-child(4){
   bottom: -100%;
   left: 0;
   width: 5px;
@@ -655,8 +695,6 @@ text-shadow: 0  2px  0   #8b6e15,
       bottom: 100%;
   }
 }
-/*zzzzzzzzzzzzzzzzzzzzzzzz */
-
 
 .text1{
    color: #c0ff05;
@@ -715,6 +753,9 @@ text-shadow: 0  2px  0   #8b6e15,
 .sector4 .text1{
   color: #fafafa;
 }
+.sector4 .text2{
+  color: #fafafa;
+}
 .sector4 .text{
   text-shadow: 0  2px  0   #00625b,
  0  4px  0   #137c75,
@@ -744,7 +785,8 @@ text-shadow: 0  2px  0   #8b6e15,
   opacity: 1;
   z-index: 2000;
   transition:  all 1.5s ease-in-out ;
-  
+  width: 100%;
+  height: 100vh;
 }
 
 
@@ -774,38 +816,19 @@ text-shadow: 0  2px  0   #8b6e15,
   transition:  all 1.5s ease-in-out ;
   
 }
-.container4{
-  width: 100%;
-  height: 100vh;
-  background: url(./img/evil.jpg);
-  position: fixed;
-  top: 0;
-  z-index: 2000;
-  visibility: hidden;
-  opacity: 0;
-  transition:  all .4s ease-in-out ;
-  text-align: center;
-  justify-content: center;
-  object-fit: cover;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: 100% 100% ;
-  
-  
-  
-}
 
-.container4_active{
-  background: url(./img/evil.jpg);
-  visibility: visible;
-  opacity: 1;
-  z-index: 2000;
-  transition:  all 1.5s ease-in-out ;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  
-  
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container_active{
   background-color: #000102;
@@ -815,36 +838,8 @@ text-shadow: 0  2px  0   #8b6e15,
   transition:  all 1.5s ease-in-out ;
   
 }
-.container5{
-  width: 100%;
-  height: 100vh;
-  background-color: #000000;
-  position: fixed;
-  top: 0;
-  z-index: 2000;
-  visibility: hidden;
-  opacity: 0;
-  transition:  all .4s ease-in-out ;
-  text-align: center;
-  justify-content: center;
-  object-fit: cover;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: 100% 100% ;
-  
-  
-}
 
-.container5_active{
-  background-color: #000000;
-  visibility: visible;
-  opacity: 1;
-  z-index: 2000;
-  transition:  all 1.5s ease-in-out ;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  
-}
+
 
 
 
@@ -883,7 +878,7 @@ text-shadow: 0  2px  0   #8b6e15,
    bottom: 50%;
    border: none;
    font-family: 'KreepTown';
-   font-size: 28px;
+   font-size: 15px;
   src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
   text-shadow: 0  2px  0   #8b6e15,
   0  4px  0   #7c6213,
@@ -920,24 +915,26 @@ text-shadow: 0  2px  0   #8b6e15,
    bottom: 50%;
    border: none;
    font-family: 'KreepTown';
-   font-size: 28px;
+   font-size: 18px;
   src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
-  text-shadow: 0  2px  0   #8b6e15,
-  0  4px  0   #7c6213,
-  0  6px  0   #6e5611, 
-  0  8px  0   #5f4b0e, 
-  0 10px  0   #503f0c,
-  0 12px  0   #41330a,
- 3px 8px 15px rgba(0,0,0,0.1),
- 3px 8px  5px rgba(0,0,0,0.3);
+  text-shadow: 0  2px  0   #158b81,
+  0  4px  0   #137c6e,
+  0  6px  0   #116e65, 
+  0  8px  0   #0e5f4f, 
+  0 10px  0   #0c3950,
+  0 12px  0   #0a4125,
+ 3px 8px 15px rgba(0, 0, 0, 0.1),
+ 3px 8px  5px rgba(0, 0, 0, 0.3);
  
  
 }
 .volverButton2:hover{
-  color: #6b009c;
+  color: #005c53;
  
  
 }
+
+
 .volverButton3{
   color: #fa602d;
   width: 10rem;
@@ -976,9 +973,18 @@ text-shadow: 0  2px  0   #8b6e15,
  
  
 }
-.sig{
-   position: absolute;
-   right: 50px;
+
+.volverButtonGod{
+  color: #11ffeb;
+  width: 10rem;
+  height: 5rem;
+  right: 5%;
+  top: 5%;
+  border-radius: 5%;
+  z-index: 2100;
+  cursor: pointer;
+  position: absolute;
+   left: 50px;
    z-index: 5000;
    display: flex;
    justify-content: center;
@@ -988,27 +994,60 @@ text-shadow: 0  2px  0   #8b6e15,
    bottom: 50%;
    border: none;
    font-family: 'KreepTown';
-   font-size: 30px;
+   font-size: 28px;
   src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
-  text-shadow: 0  2px  0   #8b6e15,
-  0  4px  0   #7c6213,
-  0  6px  0   #6e5611, 
-  0  8px  0   #5f4b0e, 
-  0 10px  0   #503f0c,
-  0 12px  0   #41330a,
- 3px 8px 15px rgba(0,0,0,0.1),
- 3px 8px  5px rgba(0,0,0,0.3);
-
+  text-shadow: 0  2px  0   #158b73,
+  0  4px  0   #137c5c,
+  0  6px  0   #116e54, 
+  0  8px  0   #0e5f53, 
+  0 10px  0   #0c5038,
+  0 12px  0   #0a412f,
+ 3px 8px 15px rgba(1, 255, 204, 0.1),
+ 3px 8px  5px rgba(0, 255, 157, 0.3);
+}
+.volverButtonGod:hover{
+  color: #fafafa;
 }
 
-.sig:hover{
-  color: #bbef00;
-  
-}
 
-.sector3 .readyManos{
+
+.sector3 .readyManosgod{
   position:relative;
   right: 20%;
+}
+
+.sector3 .readyManosgod{
+  position:relative;
+  right: 20%;
+  bottom: 5%;
+  display: flex;
+  padding: 30px 30px;
+  margin: 100px 0;
+  color: #f1d1f1;
+  text-decoration: none;
+ 
+  text-transform: uppercase;
+  border-radius: 5%;
+  letter-spacing: 4px;
+  overflow: hidden;
+  font-family: 'KreepTown';
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  z-index: 1500;
+  filter: brightness(1.75);
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+ font-size: 3.7rem;
+ transition: all .5s ease-in-out;
+ backdrop-filter: 1rem;
+ text-shadow: 0  2px  0   #8b6e15,
+ 0  4px  0   #7c6213,
+ 0  6px  0   #6e5611, 
+ 0  8px  0   #5f4b0e, 
+ 0 10px  0   #503f0c,
+ 0 12px  0   #41330a,
+3px 8px 15px rgba(0,0,0,0.1),
+3px 8px  5px rgba(0,0,0,0.3)
 }
 
 .sector3 .readyManos1{
@@ -1045,7 +1084,7 @@ text-shadow: 0  2px  0   #8b6e15,
 3px 8px  5px rgba(0,0,0,0.3)
 }
 
-.sector3 .readyManos{
+.sector3 .readyManosgod{
   color: #2b83ca;
   text-shadow: 0  2px  0   #040406,
   0  4px  0   #13657c,
@@ -1058,7 +1097,7 @@ text-shadow: 0  2px  0   #8b6e15,
  
 }
 
-.sector3 .readyManos:hover{
+.sector3 .readyManosgod:hover{
   background: url(./img/mariposa.gif);
   color: #f1f1f1;
   backdrop-filter: 1rem;
@@ -1069,15 +1108,15 @@ text-shadow: 0  2px  0   #8b6e15,
   
 }
 
-.sector3 .readyManos span:nth-child(2){
+.sector3 .readyManosgod span:nth-child(2){
   background: linear-gradient(180deg,transparent,#008472);
 }
-.sector3 .readyManos span:nth-child(3){
+.sector3 .readyManosgod span:nth-child(3){
   background: linear-gradient(270deg,transparent,#007084);
 
 }
 
-.sector3 .readyManos span:nth-child(4){
+.sector3 .readyManosgod span:nth-child(4){
   background: linear-gradient(360deg,transparent,#00847b);
 }
 
@@ -1219,6 +1258,51 @@ html, body {
 
 /* evil sector */
 
+.container4{
+  width: 100%;
+  height: 100vh;
+  background: url(./img/evil.jpg);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden; 
+  opacity: 0;
+  transition:  all .4s ease-in-out ;
+  text-align: center;
+  justify-content: center;
+  object-fit: cover;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100% ;
+  overflow: visible;
+  
+  
+}
+
+.container4_active{
+  background: url(./img/evil.jpg);
+  visibility: visible;
+  opacity: 1;
+  z-index: 2000;
+  transition:  all 1.5s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: visible;
+  
+}
+
+.videos{
+  justify-content: center;
+  align-items: center;
+  display: flex;  
+  text-align: center;
+  
+}
+
+.videos .video1{
+  width:700px;
+  height:400px;
+}
 
 .textevil{
   display: flex;
@@ -1371,3 +1455,462 @@ html, body {
   }
 }
 
+.textevil3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+ color: rgb(255, 72, 0);
+  letter-spacing: 3px;
+  padding-top: 90px;
+  font-family: 'KreepTown';
+  font-size: 3rem;
+  text-align: center;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  /* animation-iteration-count: infinite;
+  animation-name: flickering;
+  animation-timing-function: step-start;
+  animation-duration: 0.9s; */
+}
+
+
+
+
+.container4{
+  width: 100%;
+  height: 100vh;
+  background: url(./img/evil.jpg);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition:  all .4s ease-in-out ;
+  text-align: center;
+  justify-content: center;
+  object-fit: cover;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100% ;
+  overflow: visible;
+  
+  
+}
+
+.container4_active{
+  background: url(./img/evil.jpg);
+  visibility: visible;
+  opacity: 1;
+  z-index: 2000;
+  transition:  all 1.5s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: visible;
+  
+}
+
+.videos{
+  justify-content: center;
+  align-items: center;
+  display: flex;  
+  text-align: center;
+  
+}
+
+.videos .video1{
+  width:700px;
+  height:400px;
+}
+
+
+
+/* sector god */
+
+
+.containergod{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition:  all .4s ease-in-out ;
+  text-align: center;
+  justify-content: center;
+  object-fit: cover;
+  left: 0;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+
+
+.containergod_active{
+  background-color: #000000;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9998;
+  transition:  all 1s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+
+.textgod{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+  text-align: center;
+  color: rgb(64, 0, 75);
+  padding-top: 100px;
+  font-family: 'KreepTown';
+  font-size: 2rem;
+  z-index: 9999;
+  text-align: center;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  text-shadow: 0  2px  0   #7d158b,
+  0  4px  0   #73137c,
+  0  6px  0   #6e1168, 
+  0  8px  0   #540e5f, 
+  0 10px  0   #270c50,
+  0 12px  0   #370a41,
+ 3px 8px 15px rgba(0,0,0,0.1),
+ 3px 8px  5px rgba(0,0,0,0.3);
+
+}
+
+
+/* sector museo */
+.containermuseo{
+  width: 100%;
+  height: 100vh;
+  
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition:  all .1s ease-in-out ;
+ 
+
+}
+.containermuseo_active{
+  background-color: #000000;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9990;
+  transition:  all 0.5s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;;
+  
+}
+
+.containermuseo2{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition:  all .1s ease-in-out ;
+}
+.containermuseo_active2{
+  background-color: #000000;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9992;
+  transition:  all 0.5s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;;
+  
+}
+
+
+.videoPsycodelicmuseo{
+  background-color: #000000;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9990;
+  transition:  all 1.5s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 3%;
+  
+}
+.videoPsycodelicmuseo2{
+  background-color: #f5f5f5;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9998;
+  transition:  all 1.5s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 3%;
+}
+
+
+
+.sig{
+
+  font-size: 11px;
+  background-color: #ffffff;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9999;
+  position: absolute;
+  right: 50px;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  bottom: 50%;
+  border: none;
+  font-family: 'KreepTown';
+  font-size: 30px;
+ src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+ text-shadow: 0  2px  0   #153a8b,
+ 0  4px  0   #13577c,
+ 0  6px  0   #113e6e, 
+ 0  8px  0   #0e3d5f, 
+ 0 10px  0   #0c3c50,
+ 0 12px  0   #0a4141,
+3px 8px 15px rgba(0,0,0,0.1),
+3px 8px  5px rgba(0,0,0,0.3);
+  transition:  all 0.2s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.sig:hover{
+  color: #00efc3;
+  
+ }
+
+ .volverbuttonmuseo{
+  color: #11ffeb;
+  width: 10rem;
+  height: 5rem;
+  right: 5%;
+  top: 5%;
+  border-radius: 5%;
+  z-index: 2100;
+  cursor: pointer;
+  position: absolute;
+   left: 50px;
+   z-index: 5000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: transparent;
+   bottom: 50%;
+   border: none;
+   font-family: 'KreepTown';
+   font-size: 28px;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  text-shadow: 0  2px  0   #158b73,
+  0  4px  0   #137c5c,
+  0  6px  0   #116e54, 
+  0  8px  0   #0e5f53, 
+  0 10px  0   #0c5038,
+  0 12px  0   #0a412f,
+ 3px 8px 15px rgba(1, 255, 204, 0.1),
+ 3px 8px  5px rgba(0, 255, 157, 0.3);
+}
+.volverbuttonmuseo:hover{
+  color: #fafafa;
+}
+
+.volverbuttonmuseo2{
+
+  font-size: 11px;
+  background-color: #ffffff;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9999;
+  position: absolute;
+  left: 50px;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  bottom: 50%;
+  border: none;
+  font-family: 'KreepTown';
+  font-size: 30px;
+ src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+ text-shadow: 0  2px  0   #153a8b,
+ 0  4px  0   #13577c,
+ 0  6px  0   #113e6e, 
+ 0  8px  0   #0e3d5f, 
+ 0 10px  0   #0c3c50,
+ 0 12px  0   #0a4141,
+3px 8px 15px rgba(0,0,0,0.1),
+3px 8px  5px rgba(0,0,0,0.3);
+  transition:  all 0.2s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.volverbuttonmuseo2:hover{
+  color: #00efc3;
+  
+ }
+
+
+
+
+
+.volverButton4{
+  color: #fa602d;
+  width: 10rem;
+  height: 5rem;
+  right: 5%;
+  top: 5%;
+  border-radius: 5%;
+  z-index: 2100;
+  cursor: pointer;
+  position: absolute;
+   left: 50px;
+   z-index: 5000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: transparent;
+   bottom: 50%;
+   border: none;
+   font-family: 'KreepTown';
+   font-size: 28px;
+  src: local('KreepTown'), url('./assets/fonts/KreepTown.otf') format('truetype');
+  text-shadow: 0  2px  0   #8b1515,
+  0  4px  0   #7c1313,
+  0  6px  0   #6e1111, 
+  0  8px  0   #5f0e0e, 
+  0 10px  0   #500c0c,
+  0 12px  0   #410a0a,
+ 3px 8px 15px rgba(255, 1, 1, 0.1),
+ 3px 8px  5px rgba(255, 0, 0, 0.3);
+ 
+ 
+}
+.volverButton4:hover{
+  color: #ff01014b;
+ 
+ 
+}
+
+
+
+.videoPsycodelic{
+ 
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
+
+/* SECTOR DIBUJO */
+
+.containerdibujo{
+  width: 100%;
+  height: 100vh;
+  background: url(./img/evil.jpg);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden; 
+  opacity: 0;
+  transition:  all .4s ease-in-out ;
+  text-align: center;
+  justify-content: center;
+  object-fit: cover;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100% ;
+  overflow: visible;
+  
+  
+}
+
+.containerdibujo_active{
+  background: url(./img/evil.jpg);
+  visibility: visible;
+  opacity: 1;
+  z-index: 2000;
+  transition:  all 1.5s ease-in-out ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: visible;
+  
+}
+
+
+
+
+
+/* media query  */
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .videoPsycodelic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+  
+  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .videoPsycodelic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height:auto;
+    width: 100%;
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 1366px){
+  .videoPsycodelic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+  .sector3 .readyManos1{
+    position: absolute;
+    left: 56%;
+    bottom: 29%;
+    display: flex;
+    padding: 30px 30px;
+
+  }
+}
