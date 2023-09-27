@@ -215,22 +215,20 @@ body {
 
 
 
-.bottomnav {
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: center;
-  
+.bottomnav-img {
+  display: grid;
+  grid-template-columns: repeat(5, 5fr); /* 3 columnas de igual tamaño */
+  grid-gap: 0; /* Sin espacio entre las imágenes */
 }
 
-.bottomnav img {
-  width: 423px;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-
+.bottomnav-img img {
+  width: 100%; /* Ocupar el ancho completo de su celda */
+  height: auto; /* Mantener la relación de aspecto original */
+  box-sizing: border-box;
 }
+
+
+
 @media (min-width: 320px) and (max-width: 480px) {
   .bottomnav img {
     
