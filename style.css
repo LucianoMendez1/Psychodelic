@@ -1017,7 +1017,7 @@ body {
 .sector3 .readyManosgod{
   position:relative;
   right: 20%;
-  bottom: 5%;
+ 
   display: flex;
   padding: 30px 30px;
   margin: 100px 0;
@@ -1906,7 +1906,7 @@ html, body {
   .sector3 .readyManos1{
     position: absolute;
     left: 56%;
-    bottom: 29%;
+   
     display: flex;
     padding: 30px 30px;
 
